@@ -83,7 +83,14 @@ $$i=1 \implies v_{-2} = x_1, \quad \quad i=2 \implies v_{-1} = x_2, \quad \quad 
 
 Often you will not reach all of your outputs at the same time, but the way this list is constructed, a copy/identity operation will be added to "drag" the required values to the end of the list so that $v_{l-m}, \dots, v_l$ are the output values. This might seem inefficient, but it makes reverse mode a LOT easier.
 ### Forward AD
-Forward AD is the easiest to understand. Consider the function:$$y= f(x_{1},x_{2}) = \ln(x_{1})+x_{1}x_{2}-\sin(x_{2})$$We define for each $v_i$,  and an input $x_n$, $$\dot{v}_{i}=\dfrac{\partial v_{i}}{\partial x_{n}}$$
+Forward AD is the easiest to understand. Consider the function
+
+$$y= f(x_{1},x_{2}) = \ln(x_{1})+x_{1}x_{2}-\sin(x_{2})$$
+
+We define for each $v_i$,  and an input $x_n$, 
+
+$$\dot{v}_{i}=\dfrac{\partial v_{i}}{\partial x_{n}}$$
+
 We mentioned earlier that we do numerical and symbolic steps "in lockstep" with each other. What does that look like in practice? We will arbitrarily set $x_{1} = 2$ and $x_{2} =5$. We will start by finding $\dfrac{\partial y}{\partial x_1}$, which means we set $\dot{v}_{-1} = 1$ and $\dot{v}_0 = 0$.
 
 ![](graph.png)
