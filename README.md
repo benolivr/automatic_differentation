@@ -221,11 +221,11 @@ When we started our forwards mode trace, since we had 2 inputs, we set our FIRST
 |                                | $\bar{v}_1 = \bar{v}_4 \dfrac{\partial v_4}{\partial v_1} = 1 \cdot 1 = 1$                                   |
 | $v_1 = \ln(v_{-1}) = \ln(2)$   | $\bar{v}_2 = \bar{v}_4 \dfrac{\partial v_4}{\partial v_2} = 1 \cdot 1 = 1$                                   |
 | $v_2 = v_{-1} \times v_0 = 10$ | $\bar{v}_0 = \bar{v}_3 \dfrac{\partial v_3}{\partial v_0} = -1 \cdot \cos(5) = -0.284$ (1st update to $v_0$) |
-| $v_3 = \sin(v_0) = \sin(5)$    | $\bar{v}_{-1} = \bar{v}_2 \dfrac{\partial v_2}{\partial v_{-1}} = 1 \cdot 5 = 5$ (1st update to $v_{-1}$)    |
+| $v_3 = \sin(v_0) = \sin(5)$    | $\bar{v}\_{-1} = \bar{v}_2 \dfrac{\partial v_2}{\partial v\_{-1}} = 1 \cdot 5 = 5$ (1st update to $v\_{-1}$)    |
 | $v_4 = v_1 + v_2 = 10.693$     | $\bar{v}_0 = \bar{v}_0 + \bar{v}_2 \dfrac{\partial v_2}{\partial v_0} = -0.284 + (1 \cdot 2) = 1.716$        |
-| $v_5 = v_4 - v_3 = 11.652$     | $\bar{v}_{-1} = \bar{v}_{-1} + \bar{v}_1 \dfrac{\partial v_1}{\partial v_{-1}} = 5 + (1 \cdot 0.5) = 5.5$    |
-|                                | $\bar{x}_1 = \bar{v}_{-1} = {5.5}$                                                                           |
-|                                | $\bar{x}_2 = \bar{v}_{0} = {1.716}$                                                                          |
+| $v_5 = v_4 - v_3 = 11.652$     | $\bar{v}_{-1} = \bar{v}\_{-1} + \bar{v}_1 \dfrac{\partial v_1}{\partial v\_{-1}} = 5 + (1 \cdot 0.5) = 5.5$    |
+|                                | $\bar{x}_1 = \bar{v}\_{-1} = {5.5}$                                                                           |
+|                                | $\bar{x}_2 = \bar{v}\_{0} = {1.716}$                                                                          |
 
 
 We now have our Jacobian,
