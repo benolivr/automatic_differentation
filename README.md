@@ -25,7 +25,11 @@ Different methods have tried to improve this, such as using the midpoint of the 
 ### AD Is Not Symbolic Differentiation
 Symbolic differentiation is what you do in calculus, e.g. 
 
-$$\frac{d}{dx} (f (x) + g(x)) \implies \frac{d}{dx} f (x) + \frac{d}{dx} g(x)$$ and $$\frac{d}{dx} h(x) = \frac{d}{dx}(f (x) g(x))\implies\left( \frac{d}{dx} f (x)\right)g(x) + f (x)\left( \frac{d}{dx} g(x)\right)$$ 
+$$\frac{d}{dx} (f (x) + g(x)) \implies \frac{d}{dx} f (x) + \frac{d}{dx} g(x)$$ 
+
+and 
+
+$$\frac{d}{dx} h(x) = \frac{d}{dx}(f (x) g(x))\implies\left( \frac{d}{dx} f (x)\right)g(x) + f (x)\left( \frac{d}{dx} g(x)\right)$$ 
 
 (product rule).
 
@@ -234,8 +238,15 @@ First, we perform our (forward) primal trace.
 | $v_4 = v_1 + v_2 = 10.693$     |
 | $v_5 = v_4 - v_3 = 11.652$     |
 
-If we look at $v_0$, we can see it can only affect our output $y$ by affecting $v_2$ and $v_3$, since those are the only formulas it is involved in. Therefore, $$\bar{v}_0 = \frac{\partial y}{\partial v_0} = \frac{\partial y}{\partial v_2} \frac{\partial v_2}{\partial v_0} + \frac{\partial y}{\partial v_3} \frac{\partial v_3}{\partial v_0}\quad \quad \text{or} \quad \quad
-\bar{v}_0 = \bar{v}_2 \frac{\partial v_2}{\partial v_0} + \bar{v}_3 \frac{\partial v_3}{\partial v_0} .$$ note that as these are partial derivatives, $$\frac{\partial y}{\partial v_2} \frac{\partial v_2}{\partial v_0} \neq \frac{\partial y}{\partial v_0} \quad \quad \text{and} \quad \quad \frac{\partial y}{\partial v_3} \frac{\partial v_3}{\partial v_0} \neq \frac{\partial y}{\partial v_0}$$unlike how they would cancel for single variable calculus. The multivariable chain rule states that in order to get our desired gradient, we have to add up all the gradients that our desired gradient depends on. So, we need to add all the partial gradients involving $v_0$ together to get our cumulative gradient. 
+If we look at $v_0$, we can see it can only affect our output $y$ by affecting $v_2$ and $v_3$, since those are the only formulas it is involved in. Therefore, 
+
+$$\bar{v}_0 = \frac{\partial y}{\partial v_0} = \frac{\partial y}{\partial v_2} \frac{\partial v_2}{\partial v_0} + \frac{\partial y}{\partial v_3} \frac{\partial v_3}{\partial v_0}\quad \quad \text{or} \quad \quad \bar{v}_0 = \bar{v}_2 \frac{\partial v_2}{\partial v_0} + \bar{v}_3 \frac{\partial v_3}{\partial v_0} .$$ 
+
+note that as these are partial derivatives, 
+
+$$\frac{\partial y}{\partial v_2} \frac{\partial v_2}{\partial v_0} \neq \frac{\partial y}{\partial v_0} \quad \quad \text{and} \quad \quad \frac{\partial y}{\partial v_3} \frac{\partial v_3}{\partial v_0} \neq \frac{\partial y}{\partial v_0}$$
+
+unlike how they would cancel for single variable calculus. The multivariable chain rule states that in order to get our desired gradient, we have to add up all the gradients that our desired gradient depends on. So, we need to add all the partial gradients involving $v_0$ together to get our cumulative gradient. 
 
 When we started our forwards mode trace, since we had 2 inputs, we set our FIRST $\dot{v}$ to 1 and the others to 0. With backwards mode, we take the LAST $\bar{v}$ (in our case $\bar{v}_5$) and set it equal to 1 and set the others to 0 to start our backwards mode pass. We only have 1 output, so we will only need one pass.
 
