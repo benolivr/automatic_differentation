@@ -104,7 +104,7 @@ This is a computational graph that shows the dependencies of each $v_i$ for the 
 | $v_{0} = x_2 = 5$              | $\dot{v}_{0} = 0$                                                 |
 |                                |                                                                   |
 | $v_1 = \ln(v_{-1}) = \ln(2)$   | $\dot{v}_1 = \dot{v}_{-1} / v_{-1} = 1/2$                         |
-| $v_2 = v_{-1} \times v_0 = 10$ | $\dot{v}_2 = \dot{v}_{-1}v_0 + \dot{v}_0v_{-1} = 1(5) + 0(2) = 5$ |
+| $v_2 = v_{-1} \times v_0 = 10$ | $\dot{v}_2 = \dot{v}_{-1} v_0 + \dot{v}_0 v_{-1} = 1(5) + 0(2) = 5$ |
 | $v_3 = \sin(v_0) = \sin(5)$    | $\dot{v}_3 = \dot{v}_0 \cos(v_0) = 0$                             |
 | $v_4 = v_1 + v_2 = 10.693$     | $\dot{v}_4 = \dot{v}_1 + \dot{v}_2 = 0.5 + 5 = 5.5$               |
 | $v_5 = v_4 - v_3 = 11.652$     | $\dot{v}_5 = \dot{v}_4 - \dot{v}_3 = 5.5 - 0 = {5.5}$             |
@@ -120,7 +120,7 @@ Now we find $\dfrac{\partial y}{\partial x_2}$, which means we set $\dot{x}_1 = 
 | $v_{0} = x_2 = 5$              | $\dot{v}_{0} = 1$                                                   |
 |                                |                                                                     |
 | $v_1 = \ln(v_{-1}) = \ln(2)$   | $\dot{v}_1 = \dot{v}_{-1} / v_{-1} = 0/2$                           |
-| $v_2 = v_{-1} \times v_0 = 10$ | $\dot{v}_2 = \dot{v}_{-1}v_0 + v_{-1}\dot{v}_0 = 0 (5) + 2 (1) = 2$ |
+| $v_2 = v_{-1} \times v_0 = 10$ | $\dot{v}_2 = \dot{v}_{-1} v_0 + v_{-1} \dot{v}_0 = 0 (5) + 2 (1) = 2$ |
 | $v_3 = \sin(v_0) = \sin(5)$    | $\dot{v}_3 = \dot{v}_0 \cos(v_0) \approx 0.284$                     |
 | $v_4 = v_1 + v_2 = 10.693$     | $\dot{v}_4 = \dot{v}_1 + \dot{v}_2 = 0 + 2 = 2$                     |
 | $v_5 = v_4 - v_3 = 11.652$     | $\dot{v}_5 = \dot{v}_4 - \dot{v}_3 = 2 - 0.284 = {1.716}$           |
