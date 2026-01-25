@@ -128,7 +128,11 @@ Now we find $\dfrac{\partial y}{\partial x_2}$, which means we set $\dot{x}_1 = 
 
 There a concept known as a Jacobian matrix:
 
-$$\mathbf{J}_f = \begin{bmatrix} \frac{\partial y_1}{\partial x_1} & \cdots & \frac{\partial y_1}{\partial x_n} \\ \vdots & \ddots & \vdots \\ \frac{\partial y_m}{\partial x_1} & \cdots & \frac{\partial y_m}{\partial x_n} \end{bmatrix}$$
+$$\mathbf{J}_f = \begin{bmatrix} 
+\frac{\partial y_1}{\partial x_1} & \cdots & \frac{\partial y_1}{\partial x_n} \\ 
+\vdots & \ddots & \vdots \\ 
+\frac{\partial y_m}{\partial x_1} & \cdots & \frac{\partial y_m}{\partial x_n} 
+\end{bmatrix}$$
 
 For ANY function with any number of inputs, each column is how each output changes with respect to that input, and each row is how one output changes with respect to every single input (the gradient of that output). If you know the Jacobian, you can predict approximately where the output will go if you wiggle the inputs slightly in ANY direction. For our $y$, our Jacobian would be a $1\times{2}$ matrix since we have one output and 2 inputs, e.g. 
 
