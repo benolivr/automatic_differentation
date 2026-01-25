@@ -138,7 +138,16 @@ The Jacobian is the "guide" for our gradient descent. Both values of $\mathbf{J}
 
 $$ \mathbf{x}_{new} = \mathbf{x}_{old} - \eta \left( \mathbf{J}_f \right)^\top$$
 
-$$ \begin{bmatrix} x_1^{new} \\ x_2^{new} \end{bmatrix} = \begin{bmatrix} 2 \\ 5 \end{bmatrix} - 0.1 \begin{bmatrix} 5.5 \\ 1.716 \end{bmatrix} $$
+$$ \begin{bmatrix} 
+x_1^{new} \\ 
+x_2^{new} 
+\end{bmatrix} = 
+\begin{bmatrix} 2 \\ 
+5 
+\end{bmatrix} - 0.1 
+\begin{bmatrix} 5.5 \\ 
+1.716 
+\end{bmatrix} $$
 
 $$ \begin{bmatrix} x_1^{new} \\ x_2^{new} \end{bmatrix} = \begin{bmatrix} 2 \\ 5 \end{bmatrix} - \begin{bmatrix} 0.55 \\ 0.1716 \end{bmatrix} $$
 
