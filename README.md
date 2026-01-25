@@ -149,9 +149,22 @@ x_2^{new}
 1.716 
 \end{bmatrix} $$
 
-$$ \begin{bmatrix} x_1^{new} \\ x_2^{new} \end{bmatrix} = \begin{bmatrix} 2 \\ 5 \end{bmatrix} - \begin{bmatrix} 0.55 \\ 0.1716 \end{bmatrix} $$
+$$ \begin{bmatrix}
+x_1^{new} \\ 
+x_2^{new} 
+\end{bmatrix} = 
+\begin{bmatrix} 2 \\ 
+5 
+\end{bmatrix} - 
+\begin{bmatrix} 
+0.55 \\ 
+0.1716 
+\end{bmatrix} $$
 
-$$ \mathbf{x}_{new} = \begin{bmatrix} 1.45 \\ 4.8284 \end{bmatrix} $$
+$$ \mathbf{x}_{new} = \begin{bmatrix} 
+1.45 \\ 
+4.8284 
+\end{bmatrix} $$
 
 Then, we do the whole process over again, creating a new Jacobian, but this time using $\mathbf{x}_{new}$ as our starting values. ADAM, which is the next paper we will cover, optimizes this by "remembering" how quickly previous iterations approached the minima and thusly scaling the learning rate adaptively for each individual parameter.
 
