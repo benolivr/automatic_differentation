@@ -1,4 +1,8 @@
 # Automatic Differentiation
+
+[Presentation Link](https://docs.google.com/presentation/d/1izld0ECFSBY_3Fnjrg1GWuJOnwodxKbt0QcIThER5D8/edit?usp=sharing)
+
+
 ### AD Is Not Numerical Differentiation:
 Numerical differentiation is the finite difference approximation of derivatives using values of the original function evaluated at some sample points. In its simplest form, it is based on the limit definition of a derivative. 
 
