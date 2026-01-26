@@ -7,6 +7,7 @@ Limit Definition of Derivative
 $$f'(x) = \frac{f(x+h)-f(x)}{h}$$
 
 For example, for a multivariate function $f\colon\mathbb{R^n}\to\mathbb{R}$, you can approximate the gradient as follows:
+
 $$\nabla f = \left(\frac{\partial f}{\partial x_1}, \ldots,\frac{\partial f}{\partial x_n}\right)$$
 
 $$\frac{\partial f(\mathbf{x})}{\partial x_i} \approx \frac{f(\mathbf{x}+h\mathbf{e}_i)-f(\mathbf{x})}{h}$$
