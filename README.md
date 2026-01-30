@@ -40,7 +40,7 @@ $$\frac{d}{dx} h(x) = \frac{d}{dx}(f (x) g(x))\implies\left( \frac{d}{dx} f (x)\
 
 If we represent our formulae as data structures, symbolic differentiation is deterministic and even Leibniz theorized about automating this process in the 1680s. In math settings, symbolic differentiation can inform you about your problem's domain and potentially even its critical points ($\frac{d}{dx}f(x) = 0$) that would eliminate the need for derivative calculation altogether (since we want to find minima). However, symbolic derivatives can grow in size exponentially and thus become unsuitable for calculation. 
 
-If we think about our product rule example above, $h(x)$ and $\frac{d}{dx}h(x)$ both share $f(x)$ and $g(x)$ as components. Additionally, $f(x)$ and $\frac{d}{dx}f(x)$ (as well as $g(x)$ and $\frac{d}{dx}g(x)$) both appear, individually, so you can symbolically differentiate both $f(x)$ and $g(x)$, and then plug their derivatives in appropriately, we could easily produced nested duplications of computations shared between $f(x),\frac{d}{dx}f(x)$ and $g(x),\frac{d}{dx}g(x)$). While conceptually clean, this produces some problems.
+If we think about our product rule example above, $h(x)$ and $\frac{d}{dx} h(x)$ both share $f(x)$ and $g(x)$ as components. Additionally, $f(x)$ and $\frac{d}{dx} f(x)$ (as well as $g(x)$ and $\frac{d}{dx}g(x)$) both appear, individually, so you can symbolically differentiate both $f(x)$ and $g(x)$, and then plug their derivatives in appropriately, we could easily produced nested duplications of computations shared between $f(x), \frac{d}{dx} f(x)$ and $g(x), \frac{d}{dx} g(x)$). While conceptually clean, this produces some problems.
 
 For example, assume a recursive definition for a function $l$
 
